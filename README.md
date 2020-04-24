@@ -7,5 +7,7 @@ Coding [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_
 * Random, time, os, matplotlib
 * Executed in Ubuntu 18.04
 * Command: #python3 Game-of-Life.py 
+#### Output Sample:
+![](GoL.gif)
 ------
 Licenced under [MIT Licence](LICENSE).
