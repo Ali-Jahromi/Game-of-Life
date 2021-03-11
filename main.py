@@ -1,7 +1,8 @@
+#!/usr/bin/env python3
+import matplotlib.pyplot as plt
+import os
 import random
 import time
-import os
-import matplotlib.pyplot as plt
 
 #Fucntion to draw the world of cells
 def draw(u, h, w):
@@ -22,7 +23,7 @@ def draw(u, h, w):
     plt.clf()
 #Function to evolve the world based on Conway's defined rules
 def evolution(u, h, w):
-    #Drawing a temporary world to make to evolve
+    #Drawing a temporary world to evolve
     NewWorld = [[0 for x in range(w)] for y in range(h)]
     for x in range(30):
         for y in range(30):
@@ -44,24 +45,24 @@ def evolution(u, h, w):
         for y in range(30):
             worldnum [x][y] = NewWorld[x][y]
 
-
-w = 30
-h = 30
-#Generating the main world by 30*30 dimension
-world = [[int((random.random()*100)%10) for x in range(w)] for y in range(h)]
-worldnum = [[0 for x in range(w)] for y in range(h)]
-
-for x in range(30):
-    for y in range(30):
-        if world[x][y] > 1:
-            worldnum[x][y] = 0
-        else:
-            worldnum[x][y] = 1
-draw(worldnum, h , w)
-
-
-while 1:
-    evolution(worldnum, w, h)
-    time.sleep(.2)
-    os.system('clear')
+if __name__ == "__main__":
+    w = 30
+    h = 30
+    #Generating the main world by 30*30 dimension with random values
+    world = [[int((random.random()*100)%10) for x in range(w)] for y in range(h)]
+    worldnum = [[0 for x in range(w)] for y in range(h)]
+    
+    for x in range(30):
+        for y in range(30):
+            if world[x][y] > 1:
+                worldnum[x][y] = 0
+            else:
+                worldnum[x][y] = 1
+    draw(worldnum, h , w)
+    
+    
+    while 1:
+        evolution(worldnum, w, h)
+        time.sleep(.2)
+        os.system('clear')
 
