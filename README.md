@@ -6,7 +6,7 @@ Coding [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_
 ### required Libraries
 * Random, time, os, matplotlib
 * Executed in Ubuntu 18.04
-* Run: #python3 Game-of-Life.py 
+* Run: #python3 main.py 
 #### Output Sample:
 ![](GoL.gif)
 ------
